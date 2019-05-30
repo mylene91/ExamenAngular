@@ -1,0 +1,17 @@
+.imgRace {
+  height: 200px;
+  width: 80%;
+  display: block;
+}
+
+.noPicture {
+  height: 200px;
+  width: 100%;
+  display: block;
+}
+
+.working {
+  width:20px;
+  height:20px;
+  background-color: lightgreen;
+}

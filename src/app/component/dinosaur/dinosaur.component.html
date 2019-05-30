@@ -1,0 +1,20 @@
+
+<div class="col-12">
+  <div class="card mb-3">
+    <h3 class="card-header text-center"> - {{ dinosaur.name | uppercase }} -</h3>
+    <div class="card-body" [ngSwitch]="dinosaur.race.name">
+  <span *ngSwitchCase="'Tyrannosaurus'"><img  class="card-img-top imgRace"  src="../../assets/Dino/tyrannosaurus.png" [alt]="dinosaur.race"></span>
+      <span *ngSwitchCase="'Stegosaurus'"><img class="card-img-top imgRace" src="../../assets/Dino/stegosaurus.png" [alt]="dinosaur.race"></span>
+      <span *ngSwitchCase="'Pterodactylus'"><img class="card-img-top imgRace" src="../../assets/Dino/pterodactylus.png  " [alt]="dinosaur.race"></span>
+      <span *ngSwitchCase="'Archaeopteryx'"><img class="card-img-top imgRace" src="../../assets/Dino/archaeopteryx.png" [alt]="dinosaur.race"></span>
+      <span *ngSwitchCase="'Mesosaurus'"><img class="card-img-top imgRace" src="../../assets/Dino/mesosaurus.png" [alt]="dinosaur.race"></span>
+      <span *ngSwitchDefault>Aucune image</span>
+      <div> <p> Disponibilité :</p>
+        <p class="working" *ngIf="dinosaur.working"></p>
+      </div>
+
+      <h5 class="card-title"> Dinosaure de type {{ dinosaur.race.name }}</h5>
+      <a class="btn btn-primary btn-lg" routerLink="/dinosaur" role="button">Voir détails >></a>
+    </div>
+  </div>
+</div>
